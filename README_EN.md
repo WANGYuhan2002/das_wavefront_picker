@@ -586,7 +586,7 @@ das_wavefront_picker/
   - `pydas_readers/` (Daniel Bowden, ETH Zürich) and `load_das_h5_PE2024.py` (Pascal Edme, ETH
     Zürich; derived from reader code by Sara Klaasen and Daniel Bowden): their authors attached no
     license and keep all rights. They are redistributed here without changes (as found in
-    `stalta_multichan_v1`), for research use only; permission from the authors is being sought.
+    `stalta_multichan_v1`), for research and reproducibility, with the permission of the original authors.
   - `pydas_readers/util/block_filters.py` contains code taken directly from ObsPy; that code is
     under ObsPy's **LGPL-3.0**, and the MIT License does not apply to this file. Full texts:
     [LICENSES/LGPL-3.0.txt](LICENSES/LGPL-3.0.txt) and [LICENSES/GPL-3.0.txt](LICENSES/GPL-3.0.txt).

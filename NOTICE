@@ -49,12 +49,10 @@ That directory mixes the author's own code with third-party code:
           upstream release (PyPI or GitHub) was found. All rights remain with
           their authors.
         - They are redistributed here without changes (byte-identical to the
-          copies in stalta_multichan_v1/functions/), for research use only, so
-          that the detection kernel can run.
-        - Permission to redistribute them is being sought from the authors
-          (Daniel Bowden, Pascal Edme and Sara Klaasen). Until it has been
-          granted, please contact the authors before reusing these files
-          outside this repository.
+          copies in stalta_multichan_v1/functions/), for research and
+          reproducibility, with the permission of the authors (Daniel Bowden,
+          Pascal Edme and Sara Klaasen). Please contact the original authors
+          before reusing these files outside this repository.
         - The only change made here: the three channel-mapping CSV files that
           originally came with vendor/functions/pydas_readers/mapping/ (a
           channel map from another, unrelated project) were removed.
@@ -86,8 +84,8 @@ Full license texts: LICENSES/LGPL-3.0.txt and LICENSES/GPL-3.0.txt.
 
 The ObsPy-derived portions of block_filters.py remain under the LGPL-3.0; the
 MIT License of this repository does not apply to this file. The rest of the
-file is Daniel Bowden's code (see 2b); whether the whole file may be labelled
-LGPL-3.0 is part of the permission request described in 2b.
+file is Daniel Bowden's code (see 2b), redistributed with his permission; the
+file as a whole is distributed under the LGPL-3.0.
 
 
 4. Data

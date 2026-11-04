@@ -4,12 +4,14 @@
 # License note: the code written for this repository is MIT (see LICENSE).
 # vendor/functions/pydas_readers/util/block_filters.py contains code taken from
 # ObsPy and is LGPL-3.0-only, and the third-party readers in vendor/functions/
-# carry no license (permission is being sought); see NOTICE. CFF reads a list
-# of licenses as "OR", so only MIT is listed below.
+# are redistributed with the permission of their authors; see NOTICE. CFF reads
+# a list of licenses as "OR", so only MIT is listed below.
 cff-version: 1.2.0
 message: "If you use this software, please cite it using the metadata from this file."
 type: software
 title: "das_wavefront_picker"
+version: 3.0.1
+date-released: "2026-11-04"
 abstract: >-
   das_wavefront_picker detects candidate wavefronts in continuous Distributed
   Acoustic Sensing (DAS) data with a multichannel STA/LTA (Method A: simple

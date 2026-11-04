@@ -476,8 +476,8 @@ das_wavefront_picker/
 - `vendor/functions/` 是从作者的 STA/LTA 包 `stalta_multichan_v1` 逐字节拷来的,里面混有第三方代码,**不全是 MIT**:
   - `readers.py`、`stalta.py`:作者自己的代码,MIT。
   - `pydas_readers/`（Daniel Bowden,ETH Zürich）和 `load_das_h5_PE2024.py`（Pascal Edme,ETH Zürich;
-    源自 Sara Klaasen 和 Daniel Bowden 的读取代码）:原作者没有附许可证,版权归原作者。这里按
-    `stalta_multichan_v1` 里的样子原样转载,只供科研使用;正在征求作者的许可。
+    源自 Sara Klaasen 和 Daniel Bowden 的读取代码）:原作者没有附许可证,版权归原作者。这里经原作者许可,按
+    `stalta_multichan_v1` 里的样子原样转载,供科研与可复现使用。
   - `pydas_readers/util/block_filters.py` 含从 ObsPy 直接拷来的代码,这部分按 ObsPy 的 **LGPL-3.0**,
     这个文件不适用 MIT。许可证全文见 [LICENSES/LGPL-3.0.txt](LICENSES/LGPL-3.0.txt) 和
     [LICENSES/GPL-3.0.txt](LICENSES/GPL-3.0.txt)。
