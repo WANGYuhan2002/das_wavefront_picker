@@ -1,0 +1,57 @@
+# Citation File Format (https://citation-file-format.github.io/)
+# How to cite the das_wavefront_picker software.
+#
+# License note: the code written for this repository is MIT (see LICENSE).
+# vendor/functions/pydas_readers/util/block_filters.py contains code taken from
+# ObsPy and is LGPL-3.0-only, and the third-party readers in vendor/functions/
+# carry no license (permission is being sought); see NOTICE. CFF reads a list
+# of licenses as "OR", so only MIT is listed below.
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata from this file."
+type: software
+title: "das_wavefront_picker"
+abstract: >-
+  das_wavefront_picker detects candidate wavefronts in continuous Distributed
+  Acoustic Sensing (DAS) data with a multichannel STA/LTA (Method A: simple
+  channel count; Method B: wavefront tracking), then lets the user pick,
+  refine and label each wavefront interactively on its own raw-DAS waterfall
+  and saves one HDF5 file per wavefront. Version 3 adds a channel-quality
+  (bad-channel) workflow: a static quality scan that produces a channel mask
+  for detection, and an event-level confidence gate in the picker.
+authors:
+  - family-names: Wang
+    given-names: Yuhan
+license: MIT
+repository-code: "https://github.com/WANGYuhan2002/das_wavefront_picker"
+keywords:
+  - DAS
+  - distributed acoustic sensing
+  - seafloor DAS
+  - STA/LTA
+  - wavefront picking
+  - seismology
+  - Kefalonia
+references:
+  - type: article
+    status: preprint
+    title: "Persistent Faulting Activity Along the Kefalonia Transform Fault Revealed by Seafloor DAS"
+    authors:
+      - family-names: Wang
+        given-names: Yuhan
+      - family-names: Meier
+        given-names: Men-Andrin
+      - family-names: Bogris
+        given-names: Adonis
+      - family-names: Simos
+        given-names: Christos
+      - family-names: Simos
+        given-names: Iraklis
+      - family-names: Melis
+        given-names: Nikolaos S.
+      - family-names: Fichtner
+        given-names: Andreas
+    year: 2026
+    publisher:
+      name: "ESS Open Archive"
+    doi: 10.22541/essoar.15006791/v1
+    url: "https://doi.org/10.22541/essoar.15006791/v1"

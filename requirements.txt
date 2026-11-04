@@ -1,0 +1,9 @@
+# numpy must stay below 2.4: with numpy >= 2.4, int(offset_index) in
+# vendor/functions/load_das_h5_PE2024.py (line 142) raises TypeError and both
+# selftests (run.py / run_v3.py) crash on the first data read.
+numpy<2.4
+scipy
+matplotlib
+pandas
+h5py
+tqdm

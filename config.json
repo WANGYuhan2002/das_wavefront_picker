@@ -1,0 +1,32 @@
+{
+  "_comment": "Unified config for das_wavefront_picker. SET das_data_dir to a directory of your DAS .h5 files (absolute path, or relative to the app root). Every field can also be overridden on the command line (python run.py detect --help). The values below match the 80 Hz / 16 m demo sample. To run the built-in demo, drop the sample h5 files into das_wavefront_picker/demo_data/ (see README §1) — then das_data_dir can stay empty and demo/selftest auto-detect them.",
+
+  "das_data_dir": "",
+
+  "fs": 80.0,
+  "dx": 16.335231840000002,
+  "freq_band": [5.0, 20.0],
+  "spatial_range": [8000.0, 14000.0],
+
+  "sta_len": 0.3,
+  "lta_len": 3.0,
+
+  "method": "B",
+  "threshold_level": 35.0,
+  "minimal_event_interval": 1.2,
+  "min_channels": 50,
+  "tracking_params": {"neighbor_tol": 10, "time_tol": 0.05, "slope_tol": 0.05},
+  "merge_params": {"merge_time_tol": 1.0},
+  "time_range": ["2024-04-25T15:00:00", "2024-04-25T15:30:00"],
+  "dt_chunk_min": 10.0,
+
+  "output_dir": "Output",
+
+  "labels": ["P", "S", "vehicle", "explosive", "noise", "unknown"],
+  "default_label": "unknown",
+  "pad_pre_s": 2.0,
+  "pad_post_s": 3.0,
+  "n_anchors": 16,
+  "n_wiggle": 30,
+  "edge_margin_km": 0.0
+}

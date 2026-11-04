@@ -1,0 +1,97 @@
+das_wavefront_picker
+Copyright (c) 2026 Yuhan Wang
+
+This repository contains code under different terms. Read this file together
+with LICENSE (MIT) and the full license texts in LICENSES/.
+
+
+1. Code written for this application: MIT License (see LICENSE)
+-------------------------------------------------------------------------------
+run.py, run_v3.py, launch.command, config.json, dasapp/, dasapp_v3/, docs/ and
+the documentation files. Copyright (c) 2026 Yuhan Wang.
+
+
+2. vendor/functions/: the detection kernel, copied verbatim
+-------------------------------------------------------------------------------
+Every file in vendor/functions/ is a byte-identical copy of the corresponding
+file in functions/ of the author's STA/LTA package stalta_multichan_v1 (the
+paper's STA/LTA baseline package, archived in the stalta_multichan_v1/ folder
+of matched_filter_release.zip in the Zenodo record
+https://doi.org/10.5281/zenodo.20715241; stalta_multichan_v1 is not published
+as a separate GitHub repository because its detection functionality is included
+here).
+That directory mixes the author's own code with third-party code:
+
+  2a. vendor/functions/readers.py, vendor/functions/stalta.py
+      Written by Yuhan Wang (stalta_multichan_v1). MIT License,
+      Copyright (c) 2026 Yuhan Wang.
+
+  2b. Third-party code from ETH Zurich. NOT covered by the MIT License of
+      this repository.
+
+      vendor/functions/pydas_readers/
+          readers/load_das_h5.py, readers/write_das_h5.py,
+          util/block_cleaning.py, util/block_filters.py, util/block_spectra.py,
+          mapping/channel_mapping.py
+        "pydas_readers" by Daniel Bowden, ETH Zurich. He is named as the
+        author in the headers of load_das_h5.py, write_das_h5.py and
+        block_filters.py; the other files carry no author line and belong to
+        the same package.
+
+      vendor/functions/load_das_h5_PE2024.py
+        By Pascal Edme, ETH Zurich. Its header states that it was "Derived
+        from Sara and Daniel's original code to read Silixa iDASv2 format",
+        i.e. earlier reader code by Sara Klaasen and Daniel Bowden
+        (ETH Zurich).
+
+      Status of the files listed in 2b:
+        - No license text was distributed with these files, and no public
+          upstream release (PyPI or GitHub) was found. All rights remain with
+          their authors.
+        - They are redistributed here without changes (byte-identical to the
+          copies in stalta_multichan_v1/functions/), for research use only, so
+          that the detection kernel can run.
+        - Permission to redistribute them is being sought from the authors
+          (Daniel Bowden, Pascal Edme and Sara Klaasen). Until it has been
+          granted, please contact the authors before reusing these files
+          outside this repository.
+        - The only change made here: the three channel-mapping CSV files that
+          originally came with vendor/functions/pydas_readers/mapping/ (a
+          channel map from another, unrelated project) were removed.
+          channel_mapping.py itself is unchanged; this application never
+          calls it, and its get_mapping() would need such a CSV file.
+
+
+3. ObsPy-derived code in vendor/functions/pydas_readers/util/block_filters.py:
+   GNU Lesser General Public License v3.0 (LGPL-3.0)
+-------------------------------------------------------------------------------
+block_filters.py states "Chunks of code taken directly from OBSPY" (line 3).
+  - block_bandpass() is marked "Taken directly from OBSPY" (line 34) and
+    follows obspy.signal.filter.bandpass.
+  - chebychev_lowpass_downsamp() is marked "Partly based on a filter in ObsPy"
+    (line 110) and follows obspy.signal.filter.lowpass_cheby_2.
+
+ObsPy (https://www.obspy.org) is licensed under the LGPL v3.0. In the words of
+the LICENSE.txt shipped with ObsPy 1.4.1: "ObsPy is licensed under the LGPL
+v3.0, i.e. it is licensed with the GPL v3.0 and the additional set of
+permissions granted by the LGPL v3.0 license."
+
+Copyright: The ObsPy Development Team.
+The ObsPy source file these functions come from (obspy/signal/filter.py,
+ObsPy 1.4.1) carries the notices:
+    Copyright (C) 2009 Tobias Megies, Moritz Beyreuther, Yannik Behr
+    :copyright: The ObsPy Development Team
+
+Full license texts: LICENSES/LGPL-3.0.txt and LICENSES/GPL-3.0.txt.
+
+The ObsPy-derived portions of block_filters.py remain under the LGPL-3.0; the
+MIT License of this repository does not apply to this file. The rest of the
+file is Daniel Bowden's code (see 2b); whether the whole file may be labelled
+LGPL-3.0 is part of the permission request described in 2b.
+
+
+4. Data
+-------------------------------------------------------------------------------
+No DAS data are included in this repository. The sample data used by the demo
+and the selftests are part of the Zenodo record
+https://doi.org/10.5281/zenodo.20715241 (see README.md / README_EN.md).

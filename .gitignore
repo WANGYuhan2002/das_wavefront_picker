@@ -1,0 +1,40 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+Output/
+Output_*/
+demo_data/
+*.zip
+
+# --- added for the GitHub release -------------------------------------------
+# DAS data must never be committed. The sample data are on Zenodo
+# (https://doi.org/10.5281/zenodo.20715241); see README section 1.
+IN_DAS_data/
+*.h5
+*.hdf5
+*.tdms
+*.segy
+*.sgy
+*.mseed
+*.miniseed
+*.sac
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.mat
+*.tar
+*.tar.gz
+*.tgz
+
+# Python / editor / OS leftovers
+.venv/
+venv/
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+._*
+Thumbs.db
