@@ -1,5 +1,10 @@
 # das_wavefront_picker
 
+[![Version](https://img.shields.io/badge/version-3.0.1-informational)](https://github.com/WANGYuhan2002/das_wavefront_picker/tree/v3.0.1)
+[![Preprint](https://img.shields.io/badge/preprint-ESS%20Open%20Archive-orange)](https://doi.org/10.22541/essoar.15006791/v1)
+[![License](https://img.shields.io/badge/license-MIT%2C%20see%20NOTICE-green)](NOTICE)
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue)](requirements.txt)
+
 > 🌐 **中文版 → [README.md](README.md)**
 
 **STA/LTA wavefront detection + interactive wavefront picking, in one tool.**
